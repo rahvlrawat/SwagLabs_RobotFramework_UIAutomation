@@ -170,7 +170,7 @@ Open sauce labs linkedin page through footer link
     Scroll To Element       ${linkedin_link}
     Click   ${linkedin_link}
 
-Validate the newly opened page title
+Validate the newly opened page url
     [Arguments]     ${url}
     ${previous_page}=    Switch Page    NEW
     Take Screenshot

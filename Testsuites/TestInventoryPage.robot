@@ -14,17 +14,17 @@ Test Teardown       Teardown for Logout
 *** Variables ***
 
 *** Test Cases ***
-TC#1_Should be able to select random item and go to cart page as a standard_user
+TC#1_Should be able to select random item and go to cart page
     When Get random item index for inventory
     And Add a random item to cart       ${index_element}
     Then Validate item is added      1
 
-TC#2_Should be able to add all items to the cart as a standard_user
+TC#2_Should be able to add all items to the cart
     When Add all items to cart
     Then Validate item is added      ${total_items}
 
 
-TC#3_Should be able to remove selected item from cart as a standard_user
+TC#3_Should be able to remove selected item from cart
     When Get random item index for inventory
     And Add a random item to cart       ${index_element}
     And Validate item is added      1
@@ -70,12 +70,12 @@ TC#9_Using dropdown sort inventory based on Price Descending
 
 TC#10_Should be able to open sauce labs twitter page in a new window through footer link
     Open Sauce Labs twitter page through footer link
-    Validate the newly opened page title        https://twitter.com/saucelabs
+    Validate the newly opened page url        https://twitter.com/saucelabs
 
 TC#11_Should be able to open sauce labs facebook page in a new window through footer link
     Open sauce labs facebook page through footer link
-    Validate the newly opened page title        https://www.facebook.com/saucelabs
+    Validate the newly opened page url        https://www.facebook.com/saucelabs
 
 TC#12_Should be able to open sauce labs linkedin page in a new window through footer link
     Open sauce labs linkedin page through footer link
-    Validate the newly opened page title        https://www.linkedin.com/company/sauce-labs/
+    Validate the newly opened page url        https://www.linkedin.com/company/sauce-labs/

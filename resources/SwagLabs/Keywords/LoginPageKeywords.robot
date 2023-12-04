@@ -8,7 +8,7 @@ Go to Site
     New Page       ${url}
 
 Setup the Browser and Open SwagLabs Login Page
-    New Browser    chromium     args=["--start-maximized"]      headless=true
+    New Browser    chromium     args=["--start-maximized"]      #headless=true
     New Context    viewport=${None}
     Go to Site      ${URL}
 
