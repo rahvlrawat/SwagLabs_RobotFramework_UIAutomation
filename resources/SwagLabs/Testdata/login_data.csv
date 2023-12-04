@@ -1,0 +1,12 @@
+*** Test Cases ***,${state},${username},${password},${error_message}
+TC#1_Should not be able to login with empty credentials,negative,${EMPTY},${EMPTY},Epic sadface: Username is required
+TC#2_Should not be able to login with valid name and empty password,negative,standard_user,${EMPTY},Epic sadface: Password is required
+TC#3_Should not be able to login with empty name and valid password,negative,${EMPTY},secret_sauce,Epic sadface: Username is required
+TC#4_Should not be able to login with valid name and invalid password,negative,standard_user,secret_sauce1,Epic sadface: Username and password do not match any user in this service
+TC#5_Should not be able to login with invalid name and invalid password,negative,standard_user1,secret_sauce1,Epic sadface: Username and password do not match any user in this service
+TC#6_Should not be able to login with locked_out_user and valid password,negative,locked_out_user,secret_sauce,"Epic sadface: Sorry, this user has been locked out."
+TC#7_Should be able to login with valid name and valid password,positive,standard_user,secret_sauce,
+TC#8_Should be able to login with performance username and valid password,positive,performance_glitch_user,secret_sauce,
+TC#8_Should be able to login with performance username and valid password,positive,problem_user,secret_sauce,
+TC#9_Should be able to login with error_user and valid password,positive,error_user,secret_sauce,
+TC#10_Should be able to login with visual_user and valid password,positive,visual_user,secret_sauce,
